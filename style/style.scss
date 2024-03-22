@@ -1,0 +1,383 @@
+@import "./themss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  min-width:1440px;
+  margin: 0 auto;
+}
+header {
+  background-image: url(/imgs/bagrauntimg.png);
+  padding: 34px 48px 40px;
+  width: 100%;
+  min-height: 800px;
+ 
+  label,
+  input {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 47px;
+      li {
+        font-family: "Barlow";
+        font-weight: $font-w-2;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.13px;
+        color: $text-color-whaite;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      button {
+        border: none;
+        outline: none;
+        border-radius: 28px;
+        width: 140px;
+        height: 56px;
+        font-family: "Fraunces";
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.11px;
+        text-transform: uppercase;
+        color: $text-color-dark-grey;
+        cursor: pointer;
+        &:hover {
+          background: #61e5f1;
+          color: $text-color-whaite;
+        }
+      }
+    }
+  }
+  h1 {
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 56px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-top: 105px;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 96px;
+  }
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 600px);
+  .product-info {
+    margin: 0 auto;
+    padding-top: 158px;
+    display: grid;
+    gap: 32px 40px;
+    width: 445px;
+    height: 285px;
+    h2 {
+      font-family: "Fraunces";
+      font-weight: 900;
+      font-size: 40px;
+      letter-spacing: -0.01em;
+      color: $text-color-dark-grey;
+    }
+    p {
+      font-family: "Barlow";
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 167%;
+      letter-spacing: -0.01em;
+      color: $text-color-light-grey;
+    }
+    button {
+      font-family: "Fraunces";
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 167%;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      text-align: start;
+      color: $text-color-dark-grey;
+      border: none;
+      outline: none;
+      background: transparent;
+      position: relative;
+      a {
+        position: absolute;
+        z-index: 11;
+      }
+      &:hover::after {
+        cursor: pointer;
+        opacity: 1;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        opacity: 25%;
+        border-radius: 20px;
+        top: 14px;
+        left: -9px;
+        width: 137px;
+        height: 10px;
+        background: #fad400;
+      }
+    }
+  }
+  .cherry {
+    background-image: url(/imgs/cherry.jpg);
+    text-align: center;
+    display: grid;
+    align-items: end;
+    justify-content: center;
+    div {
+      width: 100%;
+      max-width: 339px;
+      height: 143px;
+      h2 {
+        font-family: "Fraunces";
+        font-weight: 900;
+        font-size: 28px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #24554a;
+      }
+      p {
+        font-family: "Barlow";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 169%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #3e7467;
+      }
+    }
+  }
+  .mandarin {
+    background-image: url(/imgs/mandarin.jpg);
+    background-size: 720px;
+    text-align: center;
+    display: grid;
+    align-items: end;
+    justify-content: center;
+    div {
+      width: 100%;
+      max-width: 339px;
+      height: 143px;
+      h2 {
+        font-family: "Fraunces";
+        font-weight: 900;
+        font-size: 28px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #052c3b;
+      }
+      p {
+        font-family: "Barlow";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 169%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #19536c;
+      }
+    }
+  }
+}
+.section-profession {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-family: "Fraunces";
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.25em;
+    color: #a7aaad;
+    margin-bottom: 81px;
+  }
+  .profesion-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 457px);
+    text-align: center;
+    column-gap: 30px;
+    div {
+      width: 100%;
+      max-width: 350px;
+      img {
+        margin-bottom: 58px;
+      }
+      p {
+        font-family: "Barlow";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 178%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: $text-color-white-grey;
+        margin-bottom: 69px;
+      }
+      h3 {
+        font-family: "Fraunces";
+        font-weight: 900;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: $text-color-dark-grey;
+        margin-bottom: 9px;
+      }
+      .profesion {
+        font-family: "Barlow";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 179%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #a7aaad;
+      }
+    }
+  }
+}
+.slide-product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 447px);
+ img{
+  width: 100%;
+ }
+}
+footer {
+  width: 1440px;
+  min-height: 350px;
+  background: #90d4c6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .logo {
+    width: 170px;
+  }
+  .footer-nav {
+    margin-top: 40px;
+    margin-bottom: 88px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 57px;
+      li {
+        font-family: "Barlow";
+        font-weight: $font-w-2;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.13px;
+        color: #458d7e;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+          color: $text-color-whaite;
+        }
+      }
+    }
+  }
+  div {
+    cursor: pointer;
+    display: flex;
+    gap: 28px;
+  }
+}
+@media (max-width: 790px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 375px;
+  }
+  header {
+    width: 100%;
+    max-width: 375px;
+    background-position: center;
+    label {
+      display: block;
+    }
+    input:checked + .nav {
+      ul {
+        display: block;
+      }
+    }
+    .nav {
+      ul {
+        display: none;
+      }
+    }
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(1, 375px);
+    grid-template-rows: repeat(312px, 437px, 312px, 437px);
+    justify-content: center;
+    align-items: center;
+    .img-page {
+      img {
+        width: 375px;
+        height: 312px;
+      }
+    }
+    .cherry {
+      background-position: center;
+      width: 375px;
+      height: 600px;
+    }
+    .mandarin {
+      background-position: center;
+      width: 375px;
+      height: 600px;
+    }
+  }
+  .section-profession {
+    .profesion-info {
+      display: grid;
+      grid-template-columns: repeat(1, 375px);
+    }
+  }
+  .slide-product {
+    display: grid;
+    grid-template-columns: repeat(2, 188px);
+    grid-template-rows: repeat(2, 188px);
+    img {
+      width: 188px;
+      height: 188px;
+    }
+  }
+
+  footer {
+    min-width: 375px;
+  }
+}

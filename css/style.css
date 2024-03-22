@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  min-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(/imgs/bagrauntimg.png);
+  padding: 34px 48px 40px;
+  width: 100%;
+  min-height: 800px;
+}
+header label,
+header input {
+  display: none;
+}
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 47px;
+}
+header .nav ul li {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.13px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+header .nav ul button {
+  border: none;
+  outline: none;
+  border-radius: 28px;
+  width: 140px;
+  height: 56px;
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.11px;
+  text-transform: uppercase;
+  color: #24303e;
+  cursor: pointer;
+}
+header .nav ul button:hover {
+  background: #61e5f1;
+  color: #ffffff;
+}
+header h1 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 56px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-top: 105px;
+}
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 96px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 600px);
+}
+.products .product-info {
+  margin: 0 auto;
+  padding-top: 158px;
+  display: grid;
+  gap: 32px 40px;
+  width: 445px;
+  height: 285px;
+}
+.products .product-info h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: -0.01em;
+  color: #24303e;
+}
+.products .product-info p {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 167%;
+  letter-spacing: -0.01em;
+  color: #808397;
+}
+.products .product-info button {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 167%;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: start;
+  color: #24303e;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: relative;
+}
+.products .product-info button a {
+  position: absolute;
+  z-index: 11;
+}
+.products .product-info button:hover::after {
+  cursor: pointer;
+  opacity: 1;
+}
+.products .product-info button::after {
+  position: absolute;
+  content: "";
+  opacity: 25%;
+  border-radius: 20px;
+  top: 14px;
+  left: -9px;
+  width: 137px;
+  height: 10px;
+  background: #fad400;
+}
+.products .cherry {
+  background-image: url(/imgs/cherry.jpg);
+  text-align: center;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.products .cherry div {
+  width: 100%;
+  max-width: 339px;
+  height: 143px;
+}
+.products .cherry div h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #24554a;
+}
+.products .cherry div p {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 169%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #3e7467;
+}
+.products .mandarin {
+  background-image: url(/imgs/mandarin.jpg);
+  background-size: 720px;
+  text-align: center;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.products .mandarin div {
+  width: 100%;
+  max-width: 339px;
+  height: 143px;
+}
+.products .mandarin div h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #052c3b;
+}
+.products .mandarin div p {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 169%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #19536c;
+}
+
+.section-profession {
+  margin-top: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section-profession h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  color: #a7aaad;
+  margin-bottom: 81px;
+}
+.section-profession .profesion-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 457px);
+  text-align: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.section-profession .profesion-info div {
+  width: 100%;
+  max-width: 350px;
+}
+.section-profession .profesion-info div img {
+  margin-bottom: 58px;
+}
+.section-profession .profesion-info div p {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 178%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #5b636d;
+  margin-bottom: 69px;
+}
+.section-profession .profesion-info div h3 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #24303e;
+  margin-bottom: 9px;
+}
+.section-profession .profesion-info div .profesion {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 179%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #a7aaad;
+}
+
+.slide-product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 447px);
+}
+.slide-product img {
+  width: 100%;
+}
+
+footer {
+  width: 1440px;
+  min-height: 350px;
+  background: #90d4c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+footer .logo {
+  width: 170px;
+}
+footer .footer-nav {
+  margin-top: 40px;
+  margin-bottom: 88px;
+}
+footer .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 57px;
+}
+footer .footer-nav ul li {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.13px;
+  color: #458d7e;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+footer .footer-nav ul li:hover {
+  color: #ffffff;
+}
+footer div {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 28px;
+}
+
+@media (max-width: 790px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 375px;
+  }
+  header {
+    width: 100%;
+    max-width: 375px;
+    background-position: center;
+  }
+  header label {
+    display: block;
+  }
+  header input:checked + .nav ul {
+    display: block;
+  }
+  header .nav ul {
+    display: none;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(1, 375px);
+    grid-template-rows: repeat(312px, 437px, 312px, 437px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .products .img-page img {
+    width: 375px;
+    height: 312px;
+  }
+  .products .cherry {
+    background-position: center;
+    width: 375px;
+    height: 600px;
+  }
+  .products .mandarin {
+    background-position: center;
+    width: 375px;
+    height: 600px;
+  }
+  .section-profession .profesion-info {
+    display: grid;
+    grid-template-columns: repeat(1, 375px);
+  }
+  .slide-product {
+    display: grid;
+    grid-template-columns: repeat(2, 188px);
+    grid-template-rows: repeat(2, 188px);
+  }
+  .slide-product img {
+    width: 188px;
+    height: 188px;
+  }
+  footer {
+    min-width: 375px;
+  }
+}
