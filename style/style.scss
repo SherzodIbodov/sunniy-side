@@ -18,15 +18,16 @@ ol {
 
 .container {
   width: 100%;
-  min-width:1440px;
   margin: 0 auto;
 }
 header {
   background-image: url(/imgs/bagrauntimg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 34px 48px 40px;
-  width: 100%;
   min-height: 800px;
- 
+  width: 100%;
   label,
   input {
     display: none;
@@ -88,17 +89,22 @@ header {
     margin-top: 96px;
   }
 }
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .products {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
   grid-template-rows: repeat(3, 600px);
   .product-info {
     margin: 0 auto;
     padding-top: 158px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 32px 40px;
-    width: 445px;
-    height: 285px;
+    max-width: 445px;
     h2 {
       font-family: "Fraunces";
       font-weight: 900;
@@ -127,6 +133,7 @@ header {
       outline: none;
       background: transparent;
       position: relative;
+      width: 160px;
       a {
         position: absolute;
         z-index: 11;
@@ -148,8 +155,19 @@ header {
       }
     }
   }
+  .img-page {
+    img {
+      width: 100%;
+      min-width: 350px;
+      max-width: 720px;
+      height: 100%;
+    }
+  }
   .cherry {
     background-image: url(/imgs/cherry.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     text-align: center;
     display: grid;
     align-items: end;
@@ -179,7 +197,10 @@ header {
   }
   .mandarin {
     background-image: url(/imgs/mandarin.jpg);
+    background-repeat: no-repeat;
     background-size: 720px;
+    background-size: cover;
+    background-position: center;
     text-align: center;
     display: grid;
     align-items: end;
@@ -214,6 +235,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   h2 {
     font-family: "Fraunces";
     font-weight: 900;
@@ -223,9 +245,10 @@ header {
     margin-bottom: 81px;
   }
   .profesion-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 457px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     text-align: center;
     column-gap: 30px;
     div {
@@ -268,14 +291,13 @@ header {
 .slide-product {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 447px);
- img{
-  width: 100%;
- }
+  grid-template-rows: auto;
+  img {
+    width: 100%;
+  }
 }
 footer {
-  width: 1440px;
-  min-height: 350px;
+  width: 100%;
   background: #90d4c6;
   display: flex;
   flex-direction: column;
@@ -312,72 +334,136 @@ footer {
     cursor: pointer;
     display: flex;
     gap: 28px;
+    svg:hover {
+      path {
+        fill: #fff;
+      }
+    }
   }
 }
 @media (max-width: 790px) {
   .container {
-    margin: 0 auto;
     width: 100%;
-    max-width: 375px;
+    // max-width: 375px;
+    // margin: 0 auto;
   }
   header {
     width: 100%;
     max-width: 375px;
+    background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    min-height: 538px;
+    position: relative;
+    h1 {
+      font-size: 40px;
+      letter-spacing: 0.16em;
+      text-align: center;
+    }
     label {
       display: block;
     }
-    input:checked + .nav {
-      ul {
-        display: block;
+    input:checked + ul {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+      padding: 60px 0px 32px;
+      button {
+        background: #fbd600;
       }
     }
+
     .nav {
+      display: flex;
+      padding-top: 32px;
+      width: 327px;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        width: 123px;
+      }
+
       ul {
+        top: 82px;
+        width: 329px;
+        height: 329px;
+        background: #fff;
         display: none;
+        text-align: center;
+
+        li {
+          font-size: 20px;
+          color: #808397;
+        }
       }
     }
   }
-  .products {
-    display: grid;
-    grid-template-columns: repeat(1, 375px);
-    grid-template-rows: repeat(312px, 437px, 312px, 437px);
-    justify-content: center;
-    align-items: center;
-    .img-page {
+  .wrapper {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    .products {
+      display: grid;
+      grid-template-columns: repeat(1, 375px);
+      grid-template-rows: 312px 417px 312px 417px 600px 600px;
+      .product-info {
+        text-align: center;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        h2 {
+          font-size: 32px;
+          letter-spacing: -0.23px;
+          width: 327px;
+        }
+        p {
+          font-size: 18px;
+          letter-spacing: -0.13px;
+          width: 327px;
+        }
+      }
+      .img-page-1 {
+        order: 1;
+      }
+      .pr-1 {
+        order: 2;
+      }
+      .img-page-2 {
+        order: 3;
+      }
+      .pr-2 {
+        order: 4;
+      }
+      .cherry {
+        order: 5;
+        background-position: center;
+      }
+      .mandarin {
+        order: 6;
+        background-position: center;
+      }
       img {
         width: 375px;
         height: 312px;
       }
     }
-    .cherry {
-      background-position: center;
-      width: 375px;
-      height: 600px;
-    }
-    .mandarin {
-      background-position: center;
-      width: 375px;
-      height: 600px;
-    }
-  }
-  .section-profession {
-    .profesion-info {
-      display: grid;
-      grid-template-columns: repeat(1, 375px);
-    }
   }
   .slide-product {
     display: grid;
-    grid-template-columns: repeat(2, 188px);
-    grid-template-rows: repeat(2, 188px);
-    img {
-      width: 188px;
-      height: 188px;
-    }
+    grid-template-columns: repeat(2, 187px);
   }
-
+  .section-profession {
+    padding: 64px 24px 86px;
+    text-align: center;
+  }
   footer {
-    min-width: 375px;
+    width: 100%;
+    .logo {
+      width: 170px;
+    }
   }
 }
